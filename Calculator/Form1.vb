@@ -1,7 +1,8 @@
 ﻿Public Class Form1
     Dim Result As Integer
     Dim button As Button
-    Dim Calc As Double
+    Dim Calc As String
+
 
     Private Sub ClickMethod(sender As Object, e As EventArgs) Handles Number1.Click, Number2.Click, Number3.Click, Number4.Click, Number5.Click, Number6.Click, Number7.Click, Number8.Click, Number9.Click, OperationPlus.Click, OperationMinus.Click, OperationMultiply.Click, OperationDivide.Click, OperationEqual.Click, OperationClear.Click
         button = CType(sender, Button)
@@ -15,7 +16,6 @@
 
         If button.Name = "Number3" Then
             TextB1.Text = TextB1.Text + Number3.Text
-
         End If
 
         If button.Name = "Number4" Then
@@ -44,7 +44,6 @@
 
         If button.Name = "OperationPlus" Then
             Calc = TextB1.Text + "+"
-
             TextB1.Text = ""
         End If
 
